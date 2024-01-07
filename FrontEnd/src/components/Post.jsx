@@ -25,8 +25,6 @@ function Post() {
   const newPost = async (text) => {
     await createPost(text);
     setRenderer(!renderer);
-
-    return ''
   };
 
   useEffect(() => {getPosts().then((result) => {setMyData(result);});}, [likes, renderer]);
